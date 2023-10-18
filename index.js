@@ -1,5 +1,6 @@
 // Base url which path and endpoints are appended to
-const baseURL = 'http://localhost:3008'
+const baseURL = 'http://localhost:3000'
+// http://localhost:3000/characters
 
 // Initial fetch for character data used to populate list on the front-end 
 fetch(`${baseURL}/characters`)

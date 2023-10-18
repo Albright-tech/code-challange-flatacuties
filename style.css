@@ -1,0 +1,263 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.body {
+    position: relative;
+    height: 100vh;
+}
+
+.container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+
+.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-image: url('/assets/0.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-container .sub-container {
+    display: block;
+    flex: 0 1 480px;
+
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+.sub-container-header {
+    padding: 0px 12px;
+}
+
+.form-container {
+    padding: 12px;
+}
+
+.form-container .heading {
+    display: flex;
+    flex-direction: row;
+    font-size: 0.8em;
+    color: gray;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.form-container .heading:hover {
+    color: black;
+}
+
+.heading p {
+    flex-grow: 1;
+}
+
+.heading .fa-solid {
+    display: flex;
+    align-items: center;
+}
+
+.form-hidden {
+    margin-top: 12px;
+    display: none;
+}
+
+.form-visible {
+    display: block;
+}
+
+input {
+    padding: 8px 16px;
+    border: 1px solid lightgray;
+    width: 100%;
+    margin: 4px;
+    border-radius: 4px;
+    font-size: 0.8em;
+}
+
+input[type='submit'] {
+    border: 0px;
+    background-color: rgb(21, 21, 21);
+    color: white;
+    text-transform: capitalize;
+    cursor: pointer;
+}
+
+input[type='submit']:hover {
+    background-color: rgb(44, 44, 44);
+}
+
+.list-header {
+    padding: 16px 12px 4px 12px;
+}
+
+.list {
+    list-style-type: none;
+}
+
+.list-item {
+    padding: 12px;
+    margin: 8px 0px;
+    border-bottom: 1px solid lightgray;
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.list-item p {
+    flex-grow: 1;
+}
+
+/* Vertical align font-awesome icon */
+.list-item .fa-solid {
+    display: flex;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.18s ease-in;
+}
+
+.list-item:hover .fa-solid {
+    visibility: visible;
+    opacity: 1;
+}
+
+.clear {
+    margin-top: 28px;
+}
+
+.clear span {
+    font-size: 0.8em;
+    padding: 2px 0px;
+    margin-left: 12px;
+    color: red;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.clear span:hover {
+    border-bottom: 2px solid red;
+}
+
+.overlay-container {
+    display: none;
+    z-index: -1;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(0, 0, 0, 0.80);
+    backdrop-filter: blur(2px);
+}
+
+.show-overlay-container {
+    z-index: 2;
+    display: flex;
+}
+
+.close-icon {
+    position: absolute;
+    font-size: 1.6em;
+    padding: 16px;
+    cursor: pointer;
+    color: white;
+    top: 12px;
+    right: 12px;
+}
+
+.close-icon:hover {
+    color: lightgray;
+}
+
+.overlay-container .sub-container {
+    display: block;
+    flex: 0 1 480px;
+
+    border-radius: 12px;
+    border: 1px solid lightgray;
+    background-color: white;
+}
+
+.overlay-container .sub-container .details {
+    position: relative;
+}
+
+.overlay-container .sub-container .animal {
+    border-radius: 12px 12px 0px 0px;
+
+    display: block;
+    height: auto;
+    object-fit: cover;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    margin-bottom: 24px;
+
+    max-height: 80vh;
+    overflow-y: scroll;
+}
+
+.overlay-container .sub-container .name {
+    text-transform: capitalize;
+    margin: 0px 24px;
+    font-size: 1em;
+}
+
+.overlay-container .sub-container .votes {
+    padding: 8px 24px;
+}
+
+.overlay-container .sub-container .votes i {
+    color: crimson;
+    font-size: 1.5em;
+    margin-right: 12px;
+    cursor: pointer;
+}
+
+.overlay-container .sub-container .votes span {
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.overlay-container .delete-votes {
+    padding: 0px 24px;
+    margin-bottom: 24px;
+}
+
+.delete-votes span {
+    font-size: 0.8em;
+    padding: 2px 0px;
+    color: grey;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.delete-votes span:hover {
+    color: red;
+    border-bottom: 2px solid red;
+}
+
+.fa-trash {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    font-size: 1em;
+    padding: 12px;
+    background-color: white;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+}
+
+.fa-trash:hover {
+    color: gray;
+}
